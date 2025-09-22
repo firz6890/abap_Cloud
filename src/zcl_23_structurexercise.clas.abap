@@ -1,4 +1,4 @@
-CLASS zcl_23_structuredatatypes DEFINITION
+CLASS zcl_23_structurexercise DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -12,7 +12,7 @@ ENDCLASS.
 
 
 
-CLASS zcl_23_structuredatatypes IMPLEMENTATION.
+CLASS zcl_23_structurexercise IMPLEMENTATION.
 
 
   METHOD if_oo_adt_classrun~main.
@@ -56,7 +56,7 @@ CLASS zcl_23_structuredatatypes IMPLEMENTATION.
 
     SELECT SINGLE
       FROM /DMO/I_Connection
-    FIELDS DepartureAirport, DestinationAirport, \_Airline-Name
+    FIELDS DepartureAirport, DestinationAirport, \_Airline-Name AS AirlineName
      WHERE AirlineID = 'LH'
        AND ConnectionID = '0400'
       INTO @connection.
@@ -71,7 +71,7 @@ CLASS zcl_23_structuredatatypes IMPLEMENTATION.
     TYPES: BEGIN OF st_nested,
              airport_from_id TYPE /dmo/airport_from_id,
              airport_to_id   TYPE /dmo/airport_to_id,
-             message         TYPE symsg,"es nested por que trae este campo que a su vez trae adentro otros campos (como una estructura)
+             message         TYPE symsg, "es nested por que trae este campo que a su vez trae adentro otros campos (como una estructura)
              carrier_name    TYPE /dmo/carrier_name,
            END OF st_nested.
 

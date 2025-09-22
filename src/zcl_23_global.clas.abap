@@ -50,5 +50,7 @@ connection = NEW #(  ).
 *
 *connection2 = connection.
 
+lcl_connection=>conn_counter = 10. "ejemplo de llamada de variable con Class-data
+
   ENDMETHOD.
 ENDCLASS.
