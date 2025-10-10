@@ -1,0 +1,157 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'UUID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'UUID'
+annotate view ZC_23FLIGHT with
+{
+  @EndUserText.label: 'UUID'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  
+  @UI.hidden: true
+  UUID;
+  
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Carrid;
+  
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Connid;
+  
+  @UI.identification: [ {
+  position: 40
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 40
+} ]
+  AirportID;
+  
+  @UI.identification: [ {
+  position: 50
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 50
+} ]
+  Name;
+  
+ @UI.identification: [ {
+  position: 60
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 60
+} ]
+  City;
+  
+  @UI.identification: [ {
+  position: 70
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 70
+} ]
+  Country;
+  
+  @UI.identification: [ {
+  position: 80
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 80
+} ]
+  z1time_zone;
+  
+  @UI.identification: [ {
+  position: 90
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 90
+} ]
+  Price;
+  
+  @UI.identification: [ {
+  position: 100
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 100
+} ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+  position: 110
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 110
+} ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+  position: 120
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 120
+} ]
+  LocalLastChangedBy;
+  
+  @UI.identification: [ {
+  position: 130
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 130
+} ]
+  LocalLastChangedAt;
+  
+  @UI.identification: [ {
+  position: 140
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 140
+} ]
+  LasChangedAt;
+  
+  @UI.identification: [ {
+  position: 150
+} ]
+  @UI.hidden: true
+  @UI.lineItem: [ {
+  position: 150
+} ]
+  _BaseEntity;
+}

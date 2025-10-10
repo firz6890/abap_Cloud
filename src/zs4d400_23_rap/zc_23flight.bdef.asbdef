@@ -1,0 +1,25 @@
+projection implementation in class ZBP_C_23FLIGHT unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZC_23FLIGHT alias Flight
+extensible
+use etag
+{
+
+ field ( readonly ) name; // aqui indicamos que ese campo solo ser de lectura
+
+  //  use create;
+  use update;
+  //  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+
+
+}

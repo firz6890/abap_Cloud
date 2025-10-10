@@ -1,0 +1,56 @@
+managed implementation in class ZBP_R_23FLIGHT unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_23FLIGHT alias Flight
+persistent table Z23FLIGHT
+extensible
+draft table Z23FLIGHT_D
+etag master LasChangedAt
+lock master total etag LasChangedAt
+authorization master( global )
+{
+  field ( readonly )
+   UUID,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LasChangedAt;
+
+  field ( numbering : managed )
+   UUID;
+
+
+  create;
+  update;
+  delete;
+
+validation validatePrice on save { create; field Price; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for Z23FLIGHT corresponding extensible
+  {
+    UUID = uuid;
+    Carrid = carrid;
+    Connid = connid;
+    CukyField = cuky_field;
+    AirportID = airport_id;
+    Name = name;
+    City = city;
+    Country = country;
+    z1time_zone  = z1time_zone ;
+    Price = price;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LasChangedAt = las_changed_at;
+  }
+
+}
